@@ -1,3 +1,3 @@
 export default {
-  dbUri: "",
+  dbUri: process.env.MONGO_CREDENTIALS,
 };
