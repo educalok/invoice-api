@@ -1,4 +1,4 @@
 export default {
-  publicKey: "PUBLIC_KEY",
-  privateKey: "PRIVATE_KEY",
+  publicKey: process.env.PUBLIC_KEY,
+  privateKey: process.env.PRIVATE_KEY,
 };
