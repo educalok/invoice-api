@@ -1,11 +1,12 @@
 {
   "name": "invoice-api",
   "version": "1.0.0",
- "main": "./dist/index.js",
+ "main": "./dist/src/index.js",
   "license": "MIT",
   "scripts": {
     "dev": "ts-node-dev src/index.ts",
-    "start": "ts-node src/index.ts"
+    "start": "ts-node src/index.ts",
+    "build": "tsc"
   },
   "dependencies": {
     "@typegoose/typegoose": "^9.12.1",
