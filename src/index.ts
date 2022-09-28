@@ -1,11 +1,11 @@
-import { ApolloServerPluginLandingPageProductionDefault, ApolloServerPluginLandingPageGraphQLPlayground } from 'apollo-server-core';
+import {ApolloServerPluginLandingPageProductionDefault, ApolloServerPluginLandingPageGraphQLPlayground} from 'apollo-server-core';
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
 }
-import { ApolloServer } from 'apollo-server-express';
+import {ApolloServer} from 'apollo-server-express';
 import 'reflect-metadata';
 import express from 'express';
-import { buildSchema } from 'type-graphql';
+import {buildSchema} from 'type-graphql';
 import cookieParser from 'cookie-parser';
 import {resolvers} from './resolvers';
 import {connectToMongo} from './utils/mongo';
@@ -47,8 +47,10 @@ async function bootstrap() {
 
   server.applyMiddleware({app});
 
+  const PORT = process.env.PORT || 4000;
+
   // app.listen on express server
-  app.listen({port: 4000}, () => {
+  app.listen({port: PORT}, () => {
     console.log('App is listening on http://localhost:4000');
   });
   connectToMongo();
