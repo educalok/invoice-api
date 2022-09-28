@@ -1,5 +1,6 @@
-import dotenv from 'dotenv';
-dotenv.config();
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
 import 'reflect-metadata';
 import express from 'express';
 import {buildSchema} from 'type-graphql';
