@@ -39,7 +39,9 @@ async function bootstrap() {
       }
       return context;
     },
-    plugins: [process.env.NODE_ENV === 'production' ? ApolloServerPluginLandingPageProductionDefault() : ApolloServerPluginLandingPageGraphQLPlayground()],
+    /*     plugins: [process.env.NODE_ENV === 'production' ? ApolloServerPluginLandingPageProductionDefault() : ApolloServerPluginLandingPageGraphQLPlayground()],
+     */
+    plugins: [ ApolloServerPluginLandingPageGraphQLPlayground()],
   });
 
   await server.start();
