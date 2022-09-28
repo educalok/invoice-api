@@ -11,7 +11,7 @@ import {resolvers} from './resolvers';
 import {connectToMongo} from './utils/mongo';
 import {verifyJwt} from './utils/jwt';
 import {User} from './schema/user.schema';
-import Context from './types/Context';
+import Context from './types/context';
 import authChecker from './utils/authChecker';
 
 async function bootstrap() {
