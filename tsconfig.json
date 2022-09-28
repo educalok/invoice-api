@@ -5,10 +5,12 @@
     "target": "es2018",
     "lib": ["es2018", "esnext.asynciterable"],
     "experimentalDecorators": true,
+    "outDir": "dist",
     "emitDecoratorMetadata": true,
     "strictPropertyInitialization": false,
     "esModuleInterop": true
   },
+  "include": ["src/**/*"],
   "ts-node": {
     "esm": true
   }
