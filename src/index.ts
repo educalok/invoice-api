@@ -1,12 +1,12 @@
+import { ApolloServerPluginLandingPageProductionDefault, ApolloServerPluginLandingPageGraphQLPlayground } from 'apollo-server-core';
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
 }
+import { ApolloServer } from 'apollo-server-express';
 import 'reflect-metadata';
 import express from 'express';
-import {buildSchema} from 'type-graphql';
+import { buildSchema } from 'type-graphql';
 import cookieParser from 'cookie-parser';
-import {ApolloServer} from 'apollo-server-express';
-import {ApolloServerPluginLandingPageGraphQLPlayground, ApolloServerPluginLandingPageProductionDefault} from 'apollo-server-core';
 import {resolvers} from './resolvers';
 import {connectToMongo} from './utils/mongo';
 import {verifyJwt} from './utils/jwt';
